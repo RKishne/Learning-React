@@ -1,0 +1,19 @@
+h1{
+    margin: 20px ;
+    font-size: 50px;
+}
+.taskentry{
+    
+    margin: 10px;
+}
+input{
+    width: 100%;
+}
+.todo-row{
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+button{
+    min-width: 80px;
+}
