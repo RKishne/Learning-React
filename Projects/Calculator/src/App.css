@@ -1,0 +1,8 @@
+.outerCalculatorlayout{
+  border: 1px solid lightgray;
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto 0;
+}

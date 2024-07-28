@@ -1,0 +1,11 @@
+.calculatorButtons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+}
+.calculatorButton{
+    width: 75px;
+    height: 45px;
+}
