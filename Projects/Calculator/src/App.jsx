@@ -2,17 +2,32 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import CalculatorInput from "./components/CalculatorInput"
 import CalculatorButtons from "./components/CalculatorButtons"
 import './App.css'
+import { useState } from "react"
 
 function App() {
-  let calcbutton = ['C', '1', '2','+','3','4','-','5','6','*','7','8','/','=','9','0','.']
+  let [calValue,setCalValue] =useState("");
+  let onButtonClick = (buttonName) =>{
+    if(buttonName === "C"){
+      setCalValue("");
+    }
+    else if (buttonName === "="){
+      let result = eval(calValue);
+      setCalValue(result);
+    }
+    else {
+      let newDisplayValue = calValue + buttonName;
+      setCalValue(newDisplayValue);
+    }
+  }
+
   return (
     <center>
       <div className="outerCalculatorlayout">
-        <CalculatorInput></CalculatorInput>
-        <CalculatorButtons calitems={calcbutton}></CalculatorButtons>
+        <CalculatorInput displayValue={calValue}></CalculatorInput>
+        <CalculatorButtons onButtonClick={onButtonClick}></CalculatorButtons>
       </div>
     </center>
   )
 }
 
-export default App
+export default App;

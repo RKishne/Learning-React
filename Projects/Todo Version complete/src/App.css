@@ -15,5 +15,8 @@ input{
     font-size: 18px;
 }
 button{
-    min-width: 80px;
+    min-width: 100px;
+}
+.add-btn {
+    text-align: left;
 }
